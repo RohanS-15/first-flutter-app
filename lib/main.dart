@@ -56,7 +56,7 @@ class _MyWidgetState extends State<MyWidget>{
         IconButton(
           icon: _isClicked ? Icon(Icons.favorite) : Icon(Icons.favorite_outline),
           color: Colors.blue,
-          // on pressed for icon
+          // on pressed for icon 
           onPressed: (){ 
             setState(() {
               if(_isClicked){
