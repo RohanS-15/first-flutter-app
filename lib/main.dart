@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'second.dart' as second;
 void main() => runApp(MyApp());
 
 class MyWidget extends StatefulWidget{
@@ -55,7 +56,7 @@ class _MyWidgetState extends State<MyWidget>{
         IconButton(
           icon: _isClicked ? Icon(Icons.favorite) : Icon(Icons.favorite_outline),
           color: Colors.blue,
-          // on pressed for icons
+          // on pressed for icon
           onPressed: (){ 
             setState(() {
               if(_isClicked){
@@ -79,6 +80,7 @@ class _MyWidgetState extends State<MyWidget>{
             color: Colors.green[400],
             // on pressed for click button
             onPressed: (){ 
+              second.hello("hello");
               setState(() {
                 _clickCounter++;
               });
@@ -92,6 +94,8 @@ class _MyWidgetState extends State<MyWidget>{
               setState(() {
                 _clickCounter = 0;
                 _isClicked = false;
+                controller.text = "";
+                _inputText = null;
               });
             }
           ),
